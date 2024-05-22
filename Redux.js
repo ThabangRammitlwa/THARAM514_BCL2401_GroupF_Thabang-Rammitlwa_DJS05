@@ -1,27 +1,26 @@
 const initialState= {count:0}
+
 const reducer=(state=initialState,action)=>{
     switch(action.type){
-        case 'INCREMENT':
-            console.log('Increment action dispatched')
+        case 'ADD':
             return {...state,count:state.count+1}
-            case 'DECREMENT':
-                console.log('Decrement action dispatched')
+            case 'SUBTRACT':
             return {...state,count:state.count-1}
+            case 'RESET':
+                return {...state,count:0}
         default:
             return state;
     }
-}  
+} ; 
 
-//let store = Redux.createStore(counter);
  const createStore = (reducer)=>{
-    let state = null;
+    let state;
     const listeners = [];
  
  const getState =()=> state;
 
  const dispatch = (action)=> {
     state = reducer(state, action);
-    console.log('New state',state)
     listeners.forEach(listener=> listener());
  }
  const subscribe = (listener)=>{
@@ -31,7 +30,18 @@ const reducer=(state=initialState,action)=>{
     }
 }
 dispatch({});
-console.log('initial state',state)
+
 return {getState,dispatch, subscribe}
 }
-let store = createStore(reducer)
+const store = createStore(reducer)
+    console.log(store.getState())
+
+store.dispatch({type:'ADD'});
+store.dispatch({type:'ADD'});
+console.log(store.getState())
+
+store.dispatch({type:'SUBTRACT'});
+console.log(store.getState())
+
+store.dispatch({type:'RESET'});
+console.log(store.getState())
