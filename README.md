@@ -44,26 +44,11 @@ AND the browser console is open
 THEN the state should display a count of 0
 ```
 
-## Requirements
-- **Implement a Global Store**: Create a Redux-inspired store that holds the state of the tally counter. The store should have the ability to dispatch actions and subscribe to state changes.
-- **State Management Functions**:
-  - **getState**: Returns the current state.
-  - **dispatch**: Takes an action (e.g., ADD, SUBTRACT, RESET) and updates the state accordingly.
-  - **subscribe**: Accepts a function that gets called whenever the state changes. This function should log the new state to the console.
-- **No UI Rendering**: This challenge focuses on state management without the complexity of UI rendering. All state changes should be observable through console logs.
-- **Functional Programming Principles**: Draw upon functional programming concepts as illustrated in the reference videos. While Redux is the inspiration, you're encouraged to apply these principles creatively in your implementation.
+### Project Overview
+This project shows how to construct a simple JavaScript state management system that is similarly to Redux. Developing a store, specifying a reducer, using actions to handle state transitions, and putting subscriptions to state changes into practice are all part of the project. Redux's simplified version highlights the fundamental ideas and workings that drive more deeper state management libraries.
 
-## Submission Guidelines
-Your submission should consist of a JavaScript file(s) that encapsulate your Redux-inspired store and the logic for dispatching actions and subscribing to changes. Include a README.md file explaining:
-- How to run your code.
-- A brief overview of your approach.
-- Any challenges you faced and how you overcame them.
+### Learning Experience
+It was enlightening and rewarding to implement a state management system from scratch that was related to Redux. My understanding of state management, immutability, and the unidirectional data flow pattern improved as a result. This report outlines the knowledge gained, difficulties faced, and abilities developed throughout this project.
 
-Ensure your code is well-commented and adheres to best practices for readability and maintainability.
-
-## Evaluation Criteria
-- **Correctness**: Your implementation should correctly handle the scenarios as outlined in the user stories.
-- **Code Quality**: Use of functional programming principles, clear naming conventions, and code organization.
-- **Documentation**: Clarity of your approach and reflections in the README.md.
-
-This challenge is an excellent opportunity to demonstrate your understanding of state management concepts and functional programming principles. Good luck!
+### Challenge Faced
+Implementing a Redux-like state management system from scratch presented several challenges. These challenges were crucial in deepening my understanding of state management principles and improving my problem-solving skills.
